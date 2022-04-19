@@ -1,0 +1,20 @@
+{
+  "name": "meme-toast",
+  "version": "1.0.0",
+  "description": "Toast library that uses memes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilthyJack/Meme-Toast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/FilthyJack/Meme-Toast/issues"
+  },
+  "homepage": "https://github.com/FilthyJack/Meme-Toast#readme"
+}

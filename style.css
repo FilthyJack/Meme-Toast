@@ -1,0 +1,32 @@
+.meme-toast{
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: aliceblue;
+    box-shadow: 2px 3px 3px 2px grey;
+    position: relative;
+    max-width: 350px;
+    min-width: 250px;
+    cursor: pointer;
+}
+
+.meme-toast::after{
+    content: "\00D7";
+    position: absolute;
+    top:2px;
+    right: 4px;
+}
+
+.meme-toast-container {
+    position: fixed;
+}
+
+.meme-toast-container[data-position="bottom"] {
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.meme-toast-container[data-position="top-right"] {
+    top: 10px;
+    right: 10px;
+}
