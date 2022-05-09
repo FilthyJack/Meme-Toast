@@ -3,31 +3,55 @@ export default class Toast {
         // Object.entries(options).forEach(([key, value])=> {
         //     this[key] = value;
         // })
+       
     }
 
     set position(value) {
         console.log(value);
     }
 
+    //position, message, duration, type
+
     toast(options) {
-        const {position="bottom", message="Hi there!"} = options;
-        const toastContainer = document.createElement('div');
-        toastContainer.classList.add('meme-toast-container');
+        const {position="bottom", message="Hi there Fella!", duration="2000", type="success"} = options;
+        let toastContainer = document.querySelector('.meme-toast-container');
+        if(toastContainer === undefined || toastContainer === null) {
+            toastContainer = document.createElement('div');
+            toastContainer.classList.add('meme-toast-container');
+        }
+
         const toast = document.createElement('div');
         toast.classList.add('meme-toast');
-        toast.innerText = message;
-        toastContainer.dataset.position = position;
+        toast.classList.add(type);
+        toast.dataset.duration = duration;
+        const pTag = document.createElement('p');
+        pTag.innerText = message;
+        toast.appendChild(pTag);
+        toast.dataset.position = position;
 
         toastContainer.appendChild(toast);
         document.body.appendChild(toastContainer);
-        this.remove();
+        this.remove(duration);
     }
 
-    remove() {
+    remove(duration) {
+        const time = duration;
+        if (time === 'infinite'){
+            return;
+        }
         setTimeout(()=>{
             const container = document.querySelector('.meme-toast-container');
-            container.remove();
-        }, 3000);
+            const toasts = container.querySelectorAll('.meme-toast');
+            toasts.forEach((toast)=>{
+                if(toast.dataset.duration === time){
+                    console.log('here');
+                    toast.remove();
+                }
+            });
+            if(container.querySelectorAll('.meme-toast').length === 0){
+                container.remove();
+            }
+        }, parseInt(time));
     }
 }
 
