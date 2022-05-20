@@ -43,7 +43,7 @@ export default class Toast {
             return;
         }
         setTimeout(()=>{
-            const toasts = container.querySelectorAll('.meme-toast');
+            const toasts = document.querySelectorAll('.meme-toast');
             toasts.forEach((toast)=>{
                 if(toast.dataset.duration === time){
                     const parent = toast.parentNode;
