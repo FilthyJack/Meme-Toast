@@ -11,6 +11,7 @@
 
 .meme-toast-container{
     position: absolute;
+    z-index: 1000;
 }
 
 .meme-toast-container[data-position="bottom"] {
