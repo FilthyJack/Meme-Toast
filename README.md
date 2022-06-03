@@ -1,4 +1,4 @@
-MmemeToast
+MemeToast
 
 > Meme-Toast is a lightweight library Toasts, which can be used with any UI Framework/design.
 
