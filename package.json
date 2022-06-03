@@ -1,6 +1,6 @@
 {
   "name": "meme-toast",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Toast library that uses memes!",
   "main": "index.js",
   "scripts": {
