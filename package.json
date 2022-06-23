@@ -1,7 +1,7 @@
 {
   "name": "meme-toast",
-  "version": "1.0.4",
-  "description": "Toast library that uses memes!",
+  "version": "1.0.5",
+  "description": "Basic Toast Library.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
