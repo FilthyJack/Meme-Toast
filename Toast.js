@@ -20,6 +20,7 @@ export default class Toast {
             toastContainer.dataset.position = position;
             this.containers.add(position);
         }
+        window.addEventListener('unload',toastContainer.remove());
         const toast = document.createElement('div');
         toast.classList.add('meme-toast');
         toast.classList.add(type);
