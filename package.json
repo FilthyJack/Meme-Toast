@@ -1,20 +1,30 @@
 {
   "name": "meme-toast",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Basic Toast Library.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare" : "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sheen07ashim/Meme-Toast.git"
   },
-  "keywords": ["Toast", "Javascript"],
+  "keywords": [
+    "Toast",
+    "Javascript"
+  ],
   "author": "",
   "license": "",
   "bugs": {
     "url": "https://github.com/sheen07ashim/Meme-Toast/issues"
   },
-  "homepage": "https://github.com/sheen07ashim/Meme-Toast#readme"
+  "homepage": "https://github.com/sheen07ashim/Meme-Toast#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "files": ["lib/**/*"]
 }
